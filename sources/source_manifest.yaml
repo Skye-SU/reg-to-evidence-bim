@@ -1,0 +1,23 @@
+# Independent source-of-truth for cited clauses.
+# rules.yaml references entries here by source_id + source_span_hash.
+# The excerpt below is the exact wording; excerpt_sha256 is computed over the
+# excerpt string (utf-8) and re-verified at runtime by sources.py.
+
+sources:
+  - source_id: HK_CAP123F_R24_CURRENT
+    clause_id: "Cap.123F Reg.24(1)"
+    title: "Height of storeys"
+    version_date: "2024-06-16"      # point-in-time of the current consolidated version
+    retrieved_date: "2026-07-18"
+    url: "https://www.elegislation.gov.hk/hk/cap123F"
+    excerpt: "Every room used or intended to be used for the purpose of an office or for habitation in any building shall have a height of not less than 2.5 m measured from floor to ceiling: Provided that there shall be not less than 2.3 m measured from the floor to the underside of any beam."
+    excerpt_sha256: "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c"
+
+  - source_id: HK_CAP123F_R30_CURRENT
+    clause_id: "Cap.123F Reg.30(2)(a)(i)"
+    title: "Lighting and ventilation of rooms used or intended to be used for habitation or as an office or kitchen"
+    version_date: "2024-06-16"
+    retrieved_date: "2026-07-18"
+    url: "https://www.elegislation.gov.hk/hk/cap123F"
+    excerpt: "The aggregate superficial area of glass in the window or windows is not less than one-tenth of the area of the floor of the room."
+    excerpt_sha256: "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24"

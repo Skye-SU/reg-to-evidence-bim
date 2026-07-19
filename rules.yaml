@@ -1,0 +1,46 @@
+# Normalized rules. This slice wires R2 and R1 end-to-end (pass/fail/review). On the pinned
+# fixture R1's glazing area is not derivable (fraction absent) so real spaces route to
+# review; constructed cases exercise the ratio pass/fail path. R3 is not implemented.
+# Each rule references sources/source_manifest.yaml by source_id + source_span_hash.
+# No legal text is copied here; the checker uses check_type + typed operands + threshold
+# (never an eval'd string).
+
+rules:
+  - rule_id: R2_finished_height
+    # Cap 123F Reg 24(1) covers rooms used for an office OR for habitation.
+    applies_to_legal_use: [habitation, office]
+    check_type: min_threshold
+    operands: [finished_ceiling_height_m]
+    threshold: 2.5
+    unit_si: m
+    evidence_required: [legal_space_use, finished_ceiling_height_m]
+    source_id: HK_CAP123F_R24_CURRENT
+    source_clause_id: "Cap.123F Reg.24(1)"
+    source_span_hash: "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c"
+    simplification_note: >-
+      Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement
+      the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)),
+      and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.
+    rule_schema_version: "1.0"
+
+  - rule_id: R1_glazing_ratio
+    # Cap 123F Reg 30(1) covers rooms used for habitation, office, or as a kitchen.
+    # Glass area is derived from Window Area x GlazingAreaFraction. When the fraction is
+    # absent (or the window-space relationship cannot be verified) the glazing operand is
+    # not usable and the check routes to review; when both operands are available the ratio
+    # is evaluated to pass/fail.
+    applies_to_legal_use: [habitation, office, kitchen]
+    check_type: ratio_minimum
+    operands: [glazing_area_m2, floor_area_m2]
+    threshold: 0.10
+    unit_si: ratio
+    evidence_required: [legal_space_use, floor_area_m2, glazing_area_m2]
+    source_id: HK_CAP123F_R30_CURRENT
+    source_clause_id: "Cap.123F Reg.30(2)(a)(i)"
+    source_span_hash: "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24"
+    simplification_note: >-
+      Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT
+      implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the
+      prescribed-window facing-external-air condition. Window outer Area alone is NOT
+      treated as glass area.
+    rule_schema_version: "1.0"

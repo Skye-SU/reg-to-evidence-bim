@@ -1,0 +1,20 @@
+[
+  {
+    "rule_id": "R2_finished_height",
+    "schema_ok": true,
+    "clause_ok": true,
+    "source_hash_ok": true,
+    "gold_diff": {},
+    "accepted": true,
+    "notes": []
+  },
+  {
+    "rule_id": "R1_glazing_ratio",
+    "schema_ok": true,
+    "clause_ok": true,
+    "source_hash_ok": true,
+    "gold_diff": {},
+    "accepted": true,
+    "notes": []
+  }
+]

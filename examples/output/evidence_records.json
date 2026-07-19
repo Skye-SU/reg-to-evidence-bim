@@ -1,0 +1,1036 @@
+[
+  {
+    "element_id": "347jFE2yX7IhCEIALmupEH",
+    "element_name": "Schlafzimmer",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "pass",
+    "observed": {
+      "finished_ceiling_height_m": 2.5
+    },
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "gap": 0.0,
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "finished_ceiling_height_m": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 2.5,
+        "raw_unit": "metre",
+        "value_si": 2.5,
+        "unit_si": "m",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "347jFE2yX7IhCEIALmupEH",
+        "property_path": "BaseQuantities.FinishCeilingHeight",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:pass"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "347jFE2yX7IhCEIALmupEH",
+    "element_name": "Schlafzimmer",
+    "rule_id": "R1_glazing_ratio",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {
+      "floor_area_m2": 21.410325
+    },
+    "required": {
+      "ratio_minimum": ">= 0.1 ratio"
+    },
+    "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+    "source_id": "HK_CAP123F_R30_CURRENT",
+    "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "floor_area_m2": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 21.410325,
+        "raw_unit": "square_metre",
+        "value_si": 21.410325,
+        "unit_si": "m2",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "347jFE2yX7IhCEIALmupEH",
+        "property_path": "BaseQuantities.NetFloorArea",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": [
+          "net_floor_area_vs_reg30_definition_requires_review"
+        ]
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [
+      "MISSING_DATA: window 1DiYqhfzH9xxuJdVHwXCNa has Area but no GlazingAreaFraction; glass area not derivable",
+      "MISSING_DATA: glazing_area_m2 not usable"
+    ],
+    "data_quality_flags": [
+      "net_floor_area_vs_reg30_definition_requires_review"
+    ],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the prescribed-window facing-external-air condition. Window outer Area alone is NOT treated as glass area.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "0Lt8gR_E9ESeGH5uY_g9e9",
+    "element_name": "Wohnen",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "pass",
+    "observed": {
+      "finished_ceiling_height_m": 2.5
+    },
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "gap": 0.0,
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "finished_ceiling_height_m": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 2.5,
+        "raw_unit": "metre",
+        "value_si": 2.5,
+        "unit_si": "m",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "0Lt8gR_E9ESeGH5uY_g9e9",
+        "property_path": "BaseQuantities.FinishCeilingHeight",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:pass"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "2RSCzLOBz4FAK$_wE8VckM",
+    "element_name": "Buero",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "pass",
+    "observed": {
+      "finished_ceiling_height_m": 2.5
+    },
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "gap": 0.0,
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "finished_ceiling_height_m": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 2.5,
+        "raw_unit": "metre",
+        "value_si": 2.5,
+        "unit_si": "m",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "2RSCzLOBz4FAK$_wE8VckM",
+        "property_path": "BaseQuantities.FinishCeilingHeight",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:pass"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "2RSCzLOBz4FAK$_wE8VckM",
+    "element_name": "Buero",
+    "rule_id": "R1_glazing_ratio",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {
+      "floor_area_m2": 12.59545
+    },
+    "required": {
+      "ratio_minimum": ">= 0.1 ratio"
+    },
+    "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+    "source_id": "HK_CAP123F_R30_CURRENT",
+    "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "floor_area_m2": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 12.59545,
+        "raw_unit": "square_metre",
+        "value_si": 12.59545,
+        "unit_si": "m2",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "2RSCzLOBz4FAK$_wE8VckM",
+        "property_path": "BaseQuantities.NetFloorArea",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": [
+          "net_floor_area_vs_reg30_definition_requires_review"
+        ]
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [
+      "MISSING_DATA: window 1TAI4ouKX4Xx4lBDZIu5qM has Area but no GlazingAreaFraction; glass area not derivable",
+      "MISSING_DATA: glazing_area_m2 not usable"
+    ],
+    "data_quality_flags": [
+      "net_floor_area_vs_reg30_definition_requires_review"
+    ],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the prescribed-window facing-external-air condition. Window outer Area alone is NOT treated as glass area.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "2dQFggKBb1fOc1CqZDIDlx",
+    "element_name": "Galerie",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "pass",
+    "observed": {
+      "finished_ceiling_height_m": 4.0
+    },
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "gap": 1.5,
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "finished_ceiling_height_m": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 4.0,
+        "raw_unit": "metre",
+        "value_si": 4.0,
+        "unit_si": "m",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "2dQFggKBb1fOc1CqZDIDlx",
+        "property_path": "BaseQuantities.FinishCeilingHeight",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:pass"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "2dQFggKBb1fOc1CqZDIDlx",
+    "element_name": "Galerie",
+    "rule_id": "R1_glazing_ratio",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {
+      "floor_area_m2": 74.5092415823
+    },
+    "required": {
+      "ratio_minimum": ">= 0.1 ratio"
+    },
+    "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+    "source_id": "HK_CAP123F_R30_CURRENT",
+    "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "floor_area_m2": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 74.5092415823,
+        "raw_unit": "square_metre",
+        "value_si": 74.5092415823,
+        "unit_si": "m2",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "2dQFggKBb1fOc1CqZDIDlx",
+        "property_path": "BaseQuantities.NetFloorArea",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": [
+          "net_floor_area_vs_reg30_definition_requires_review"
+        ]
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [
+      "MISSING_DATA: window 1zOBw0Gej5Wf0QAJfHnOc0 has Area but no GlazingAreaFraction; glass area not derivable",
+      "MISSING_DATA: glazing_area_m2 not usable"
+    ],
+    "data_quality_flags": [
+      "net_floor_area_vs_reg30_definition_requires_review"
+    ],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the prescribed-window facing-external-air condition. Window outer Area alone is NOT treated as glass area.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "3$f2p7VyLB7eox67SA_zKE",
+    "element_name": "Flur",
+    "rule_id": "R2_finished_height",
+    "applicability": "not_applicable",
+    "status": "not_applicable",
+    "observed": {},
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "finished_ceiling_height_m": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 2.5,
+        "raw_unit": "metre",
+        "value_si": 2.5,
+        "unit_si": "m",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "3$f2p7VyLB7eox67SA_zKE",
+        "property_path": "BaseQuantities.FinishCeilingHeight",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:not_applicable"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "0e_hbkIQ5DMQlIJ$2V3j_m",
+    "element_name": "Bad",
+    "rule_id": "R2_finished_height",
+    "applicability": "unknown",
+    "status": "needs_review",
+    "observed": {},
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "finished_ceiling_height_m": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 2.5,
+        "raw_unit": "metre",
+        "value_si": 2.5,
+        "unit_si": "m",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "0e_hbkIQ5DMQlIJ$2V3j_m",
+        "property_path": "BaseQuantities.FinishCeilingHeight",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [
+      "RULE_SCOPE_UNKNOWN: legal_space_use not established; the model does not legally classify the room"
+    ],
+    "data_quality_flags": [],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:unknown"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "17JZcMFrf5tOftUTidA0d3",
+    "element_name": "K\u00fcche",
+    "rule_id": "R1_glazing_ratio",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {
+      "floor_area_m2": 16.30545
+    },
+    "required": {
+      "ratio_minimum": ">= 0.1 ratio"
+    },
+    "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+    "source_id": "HK_CAP123F_R30_CURRENT",
+    "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "floor_area_m2": {
+        "source_mode": "pinned_ifc",
+        "raw_value": 16.30545,
+        "raw_unit": "square_metre",
+        "value_si": 16.30545,
+        "unit_si": "m2",
+        "model_sha256": "ea6f04eaf92fac4d7ad0038bc3d2dfea4c094dd3f516ecc33c50bf1835ca108d",
+        "ifc_schema": "IFC4",
+        "element_global_id": "17JZcMFrf5tOftUTidA0d3",
+        "property_path": "BaseQuantities.NetFloorArea",
+        "extraction_method": "ifcopenshell.util.element.get_psets",
+        "data_quality_flags": [
+          "net_floor_area_vs_reg30_definition_requires_review"
+        ]
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [
+      "MISSING_DATA: window 25nJxEpYf8LRDJNkMUVO0m has Area but no GlazingAreaFraction; glass area not derivable",
+      "MISSING_DATA: glazing_area_m2 not usable"
+    ],
+    "data_quality_flags": [
+      "net_floor_area_vs_reg30_definition_requires_review"
+    ],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the prescribed-window facing-external-air condition. Window outer Area alone is NOT treated as glass area.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-LOWROOM",
+    "element_name": "Constructed low habitable room",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "fail",
+    "observed": {
+      "finished_ceiling_height_m": 2.3
+    },
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "gap": -0.2,
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "finished_ceiling_height_m": {
+        "source_mode": "constructed_case",
+        "raw_value": 2.3,
+        "raw_unit": "m",
+        "value_si": 2.3,
+        "unit_si": "m",
+        "property_path": "constructed_case.finished_ceiling_height_m",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:fail"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-SLABONLY",
+    "element_name": "Constructed room with slab-to-slab height only",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {},
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {},
+    "rejected_observations": [
+      {
+        "field_name": "finished_ceiling_height_m",
+        "provenance": {
+          "source_mode": "constructed_case",
+          "raw_value": 2.4,
+          "raw_unit": "m",
+          "unit_si": "m",
+          "property_path": "constructed_case.slab_height_m",
+          "extraction_method": "hand_authored",
+          "data_quality_flags": [
+            "slab_to_slab_height_present_not_substitutable"
+          ]
+        }
+      }
+    ],
+    "review_reasons": [
+      "DEFINITION_MISMATCH: only slab-to-slab Height present; not substitutable",
+      "MISSING_DATA: finished_ceiling_height_m not usable"
+    ],
+    "data_quality_flags": [
+      "slab_to_slab_height_present_not_substitutable"
+    ],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-NODATA",
+    "element_name": "Constructed room with no height data",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {},
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {},
+    "rejected_observations": [],
+    "review_reasons": [
+      "MISSING_DATA: finished_ceiling_height_m \u2014 no height data"
+    ],
+    "data_quality_flags": [],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-R1-NOWINDOW",
+    "element_name": "Constructed habitable room, window-space relation unverifiable",
+    "rule_id": "R1_glazing_ratio",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {
+      "floor_area_m2": 20.0
+    },
+    "required": {
+      "ratio_minimum": ">= 0.1 ratio"
+    },
+    "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+    "source_id": "HK_CAP123F_R30_CURRENT",
+    "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "floor_area_m2": {
+        "source_mode": "constructed_case",
+        "raw_value": 20.0,
+        "raw_unit": "m2",
+        "value_si": 20.0,
+        "unit_si": "m2",
+        "property_path": "constructed_case.floor_area_m2",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [
+      "RELATIONSHIP_UNVERIFIED: constructed review case",
+      "MISSING_DATA: glazing_area_m2 not usable"
+    ],
+    "data_quality_flags": [],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the prescribed-window facing-external-air condition. Window outer Area alone is NOT treated as glass area.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-R1-PASS",
+    "element_name": "Constructed habitable room, adequate glazing",
+    "rule_id": "R1_glazing_ratio",
+    "applicability": "applicable",
+    "status": "pass",
+    "observed": {
+      "glazing_area_m2": 3.0,
+      "floor_area_m2": 20.0,
+      "ratio": 0.15
+    },
+    "required": {
+      "ratio_minimum": ">= 0.1 ratio"
+    },
+    "gap": 0.05,
+    "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+    "source_id": "HK_CAP123F_R30_CURRENT",
+    "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "floor_area_m2": {
+        "source_mode": "constructed_case",
+        "raw_value": 20.0,
+        "raw_unit": "m2",
+        "value_si": 20.0,
+        "unit_si": "m2",
+        "property_path": "constructed_case.floor_area_m2",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      },
+      "glazing_area_m2": {
+        "source_mode": "constructed_case",
+        "raw_value": 3.0,
+        "raw_unit": "m2",
+        "value_si": 3.0,
+        "unit_si": "m2",
+        "property_path": "constructed_case.glazing_area_m2",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:pass"
+    ],
+    "simplification_note": "Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the prescribed-window facing-external-air condition. Window outer Area alone is NOT treated as glass area.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-R1-FAIL",
+    "element_name": "Constructed habitable room, insufficient glazing",
+    "rule_id": "R1_glazing_ratio",
+    "applicability": "applicable",
+    "status": "fail",
+    "observed": {
+      "glazing_area_m2": 1.5,
+      "floor_area_m2": 20.0,
+      "ratio": 0.075
+    },
+    "required": {
+      "ratio_minimum": ">= 0.1 ratio"
+    },
+    "gap": -0.025,
+    "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+    "source_id": "HK_CAP123F_R30_CURRENT",
+    "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "floor_area_m2": {
+        "source_mode": "constructed_case",
+        "raw_value": 20.0,
+        "raw_unit": "m2",
+        "value_si": 20.0,
+        "unit_si": "m2",
+        "property_path": "constructed_case.floor_area_m2",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      },
+      "glazing_area_m2": {
+        "source_mode": "constructed_case",
+        "raw_value": 1.5,
+        "raw_unit": "m2",
+        "value_si": 1.5,
+        "unit_si": "m2",
+        "property_path": "constructed_case.glazing_area_m2",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:fail"
+    ],
+    "simplification_note": "Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the prescribed-window facing-external-air condition. Window outer Area alone is NOT treated as glass area.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-R1-EQ",
+    "element_name": "Constructed office, glazing exactly at threshold",
+    "rule_id": "R1_glazing_ratio",
+    "applicability": "applicable",
+    "status": "pass",
+    "observed": {
+      "glazing_area_m2": 2.0,
+      "floor_area_m2": 20.0,
+      "ratio": 0.1
+    },
+    "required": {
+      "ratio_minimum": ">= 0.1 ratio"
+    },
+    "gap": 0.0,
+    "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+    "source_id": "HK_CAP123F_R30_CURRENT",
+    "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "floor_area_m2": {
+        "source_mode": "constructed_case",
+        "raw_value": 20.0,
+        "raw_unit": "m2",
+        "value_si": 20.0,
+        "unit_si": "m2",
+        "property_path": "constructed_case.floor_area_m2",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      },
+      "glazing_area_m2": {
+        "source_mode": "constructed_case",
+        "raw_value": 2.0,
+        "raw_unit": "m2",
+        "value_si": 2.0,
+        "unit_si": "m2",
+        "property_path": "constructed_case.glazing_area_m2",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:pass"
+    ],
+    "simplification_note": "Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the prescribed-window facing-external-air condition. Window outer Area alone is NOT treated as glass area.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-R2-MM",
+    "element_name": "Constructed habitable room, height given in millimetres",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "pass",
+    "observed": {
+      "finished_ceiling_height_m": 2.6
+    },
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "gap": 0.1,
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "finished_ceiling_height_m": {
+        "source_mode": "constructed_case",
+        "raw_value": 2600.0,
+        "raw_unit": "mm",
+        "value_si": 2.6,
+        "unit_si": "m",
+        "property_path": "constructed_case.finished_ceiling_height_m",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:pass"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-R1-CM2",
+    "element_name": "Constructed kitchen, glazing given in square centimetres",
+    "rule_id": "R1_glazing_ratio",
+    "applicability": "applicable",
+    "status": "pass",
+    "observed": {
+      "glazing_area_m2": 3.0,
+      "floor_area_m2": 20.0,
+      "ratio": 0.15
+    },
+    "required": {
+      "ratio_minimum": ">= 0.1 ratio"
+    },
+    "gap": 0.05,
+    "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+    "source_id": "HK_CAP123F_R30_CURRENT",
+    "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+    "source_integrity_verified": true,
+    "input_provenance": {
+      "floor_area_m2": {
+        "source_mode": "constructed_case",
+        "raw_value": 20.0,
+        "raw_unit": "m2",
+        "value_si": 20.0,
+        "unit_si": "m2",
+        "property_path": "constructed_case.floor_area_m2",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      },
+      "glazing_area_m2": {
+        "source_mode": "constructed_case",
+        "raw_value": 30000.0,
+        "raw_unit": "cm2",
+        "value_si": 3.0,
+        "unit_si": "m2",
+        "property_path": "constructed_case.glazing_area_m2",
+        "extraction_method": "hand_authored",
+        "data_quality_flags": []
+      }
+    },
+    "rejected_observations": [],
+    "review_reasons": [],
+    "data_quality_flags": [],
+    "human_review_flag": false,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:ok",
+      "evaluate:pass"
+    ],
+    "simplification_note": "Demonstration only. Glass area = Window Area x GlazingAreaFraction. Does NOT implement the 1/16 openable-area sub-requirement (Reg 30(2)(a)(ii)) or the prescribed-window facing-external-air condition. Window outer Area alone is NOT treated as glass area.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-UNIT-MISSING",
+    "element_name": "Constructed room, height value with no unit",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {},
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {},
+    "rejected_observations": [
+      {
+        "field_name": "finished_ceiling_height_m",
+        "provenance": {
+          "source_mode": "constructed_case",
+          "raw_value": 2.5,
+          "unit_si": "m",
+          "property_path": "constructed_case.finished_ceiling_height_m",
+          "extraction_method": "hand_authored",
+          "data_quality_flags": [
+            "unit_mismatch:unit missing"
+          ]
+        }
+      }
+    ],
+    "review_reasons": [
+      "UNIT_MISMATCH: finished_ceiling_height_m \u2014 unit missing"
+    ],
+    "data_quality_flags": [],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-UNIT-UNKNOWN",
+    "element_name": "Constructed room, unknown/non-convertible unit",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {},
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {},
+    "rejected_observations": [
+      {
+        "field_name": "finished_ceiling_height_m",
+        "provenance": {
+          "source_mode": "constructed_case",
+          "raw_value": 2.5,
+          "raw_unit": "cubit",
+          "unit_si": "m",
+          "property_path": "constructed_case.finished_ceiling_height_m",
+          "extraction_method": "hand_authored",
+          "data_quality_flags": [
+            "unit_mismatch:unknown/non-convertible unit 'cubit'"
+          ]
+        }
+      }
+    ],
+    "review_reasons": [
+      "UNIT_MISMATCH: finished_ceiling_height_m \u2014 unknown/non-convertible unit 'cubit'"
+    ],
+    "data_quality_flags": [],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  },
+  {
+    "element_id": "CTRL-UNIT-DIM",
+    "element_name": "Constructed room, area unit given for a length operand",
+    "rule_id": "R2_finished_height",
+    "applicability": "applicable",
+    "status": "needs_review",
+    "observed": {},
+    "required": {
+      "min_threshold": ">= 2.5 m"
+    },
+    "source_clause_id": "Cap.123F Reg.24(1)",
+    "source_id": "HK_CAP123F_R24_CURRENT",
+    "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+    "source_integrity_verified": true,
+    "input_provenance": {},
+    "rejected_observations": [
+      {
+        "field_name": "finished_ceiling_height_m",
+        "provenance": {
+          "source_mode": "constructed_case",
+          "raw_value": 2.5,
+          "raw_unit": "m2",
+          "unit_si": "m",
+          "property_path": "constructed_case.finished_ceiling_height_m",
+          "extraction_method": "hand_authored",
+          "data_quality_flags": [
+            "unit_mismatch:dimension mismatch: 'm2' has dimension 'area', expected 'length'"
+          ]
+        }
+      }
+    ],
+    "review_reasons": [
+      "UNIT_MISMATCH: finished_ceiling_height_m \u2014 dimension mismatch: 'm2' has dimension 'area', expected 'length'"
+    ],
+    "data_quality_flags": [],
+    "human_review_flag": true,
+    "decision_path": [
+      "source_integrity:ok",
+      "applicability:applicable",
+      "mapping:needs_review"
+    ],
+    "simplification_note": "Demonstration only. Checks floor-to-ceiling height >= 2.5 m. Does NOT implement the 2.3 m under-beam proviso, the sloping-ceiling mean-height rule (Reg 24(2)), and does NOT accept slab-to-slab Height as a substitute for FinishCeilingHeight.",
+    "rule_schema_version": "1.0",
+    "run_id": "demo-r2-001"
+  }
+]

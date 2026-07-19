@@ -1,0 +1,31 @@
+{
+  "_comment": "Expected (rule_id, element_id) outcomes, authored from design intent BEFORE running the pipeline. R2 and R1 both cover pass/fail/review. Unit handling: safely convertible non-SI units pass/fail normally; UNIT_MISMATCH is reserved for missing/unknown/dimension-inconsistent units.",
+  "expected": [
+    {"rule_id": "R2_finished_height", "element_id": "347jFE2yX7IhCEIALmupEH", "status": "pass", "applicability": "applicable"},
+    {"rule_id": "R2_finished_height", "element_id": "0Lt8gR_E9ESeGH5uY_g9e9", "status": "pass", "applicability": "applicable"},
+    {"rule_id": "R2_finished_height", "element_id": "2RSCzLOBz4FAK$_wE8VckM", "status": "pass", "applicability": "applicable"},
+    {"rule_id": "R2_finished_height", "element_id": "2dQFggKBb1fOc1CqZDIDlx", "status": "pass", "applicability": "applicable"},
+    {"rule_id": "R2_finished_height", "element_id": "3$f2p7VyLB7eox67SA_zKE", "status": "not_applicable", "applicability": "not_applicable"},
+    {"rule_id": "R2_finished_height", "element_id": "0e_hbkIQ5DMQlIJ$2V3j_m", "status": "needs_review", "applicability": "unknown"},
+    {"rule_id": "R2_finished_height", "element_id": "CTRL-LOWROOM", "status": "fail", "applicability": "applicable"},
+    {"rule_id": "R2_finished_height", "element_id": "CTRL-SLABONLY", "status": "needs_review", "applicability": "applicable"},
+    {"rule_id": "R2_finished_height", "element_id": "CTRL-NODATA", "status": "needs_review", "applicability": "applicable"},
+
+    {"rule_id": "R1_glazing_ratio", "element_id": "347jFE2yX7IhCEIALmupEH", "status": "needs_review", "applicability": "applicable", "review_reason": "MISSING_DATA"},
+    {"rule_id": "R1_glazing_ratio", "element_id": "2RSCzLOBz4FAK$_wE8VckM", "status": "needs_review", "applicability": "applicable", "review_reason": "MISSING_DATA"},
+    {"rule_id": "R1_glazing_ratio", "element_id": "2dQFggKBb1fOc1CqZDIDlx", "status": "needs_review", "applicability": "applicable", "review_reason": "MISSING_DATA"},
+    {"rule_id": "R1_glazing_ratio", "element_id": "17JZcMFrf5tOftUTidA0d3", "status": "needs_review", "applicability": "applicable", "review_reason": "MISSING_DATA"},
+    {"rule_id": "R1_glazing_ratio", "element_id": "CTRL-R1-NOWINDOW", "status": "needs_review", "applicability": "applicable", "review_reason": "RELATIONSHIP_UNVERIFIED"},
+
+    {"rule_id": "R1_glazing_ratio", "element_id": "CTRL-R1-PASS", "status": "pass", "applicability": "applicable"},
+    {"rule_id": "R1_glazing_ratio", "element_id": "CTRL-R1-FAIL", "status": "fail", "applicability": "applicable"},
+    {"rule_id": "R1_glazing_ratio", "element_id": "CTRL-R1-EQ", "status": "pass", "applicability": "applicable"},
+
+    {"rule_id": "R2_finished_height", "element_id": "CTRL-R2-MM", "status": "pass", "applicability": "applicable"},
+    {"rule_id": "R1_glazing_ratio", "element_id": "CTRL-R1-CM2", "status": "pass", "applicability": "applicable"},
+
+    {"rule_id": "R2_finished_height", "element_id": "CTRL-UNIT-MISSING", "status": "needs_review", "applicability": "applicable", "review_reason": "UNIT_MISMATCH"},
+    {"rule_id": "R2_finished_height", "element_id": "CTRL-UNIT-UNKNOWN", "status": "needs_review", "applicability": "applicable", "review_reason": "UNIT_MISMATCH"},
+    {"rule_id": "R2_finished_height", "element_id": "CTRL-UNIT-DIM", "status": "needs_review", "applicability": "applicable", "review_reason": "UNIT_MISMATCH"}
+  ]
+}

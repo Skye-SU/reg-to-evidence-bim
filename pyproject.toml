@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reg-to-check"
+version = "0.1.0"
+description = "Auditable rule-to-BIM compliance prototype: R1/R2 pass/fail/review with source-integrity, unit handling, and a validated LLM rule-extraction loop."
+requires-python = ">=3.13"
+dependencies = [
+    "ifcopenshell==0.8.5",
+    "pydantic>=2,<3",
+    "PyYAML>=6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+reg-to-check = "reg_to_check.cli:main"
+
+[tool.setuptools]
+packages = ["reg_to_check"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,163 @@
+[
+  {
+    "element_id": "347jFE2yX7IhCEIALmupEH",
+    "element_source_mode": "pinned_ifc",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height", "R1_glazing_ratio"],
+    "note": "Schlafzimmer (bedroom). R2: real 2.5 m -> pass (threshold equality). R1: windows present but GlazingAreaFraction absent -> review (MISSING_DATA)."
+  },
+  {
+    "element_id": "0Lt8gR_E9ESeGH5uY_g9e9",
+    "element_source_mode": "pinned_ifc",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height"],
+    "note": "Wohnen (living). R2: real 2.5 m -> pass."
+  },
+  {
+    "element_id": "2RSCzLOBz4FAK$_wE8VckM",
+    "element_source_mode": "pinned_ifc",
+    "legal_space_use": "office",
+    "rules": ["R2_finished_height", "R1_glazing_ratio"],
+    "note": "Buero (office). R2: 2.5 m pass. R1: office is in Reg 30 scope; glazing fraction absent -> review."
+  },
+  {
+    "element_id": "2dQFggKBb1fOc1CqZDIDlx",
+    "element_source_mode": "pinned_ifc",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height", "R1_glazing_ratio"],
+    "note": "Galerie. R2: 4.0 m clear pass. R1: glazing fraction absent -> review."
+  },
+  {
+    "element_id": "3$f2p7VyLB7eox67SA_zKE",
+    "element_source_mode": "pinned_ifc",
+    "legal_space_use": "circulation",
+    "rules": ["R2_finished_height"],
+    "note": "Flur (corridor). Outside Reg 24(1) scope -> not_applicable."
+  },
+  {
+    "element_id": "0e_hbkIQ5DMQlIJ$2V3j_m",
+    "element_source_mode": "pinned_ifc",
+    "legal_space_use": null,
+    "rules": ["R2_finished_height"],
+    "note": "Bad (bathroom). Legal use not established -> scope unknown -> review."
+  },
+  {
+    "element_id": "17JZcMFrf5tOftUTidA0d3",
+    "element_source_mode": "pinned_ifc",
+    "legal_space_use": "kitchen",
+    "rules": ["R1_glazing_ratio"],
+    "note": "Kueche (kitchen). Kitchen is in Reg 30 scope; windows present but GlazingAreaFraction absent -> review (MISSING_DATA)."
+  },
+  {
+    "element_id": "CTRL-LOWROOM",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed low habitable room",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height"],
+    "finished_ceiling_height_m": 2.3,
+    "note": "R2 constructed fail case: 2.3 m < 2.5 m."
+  },
+  {
+    "element_id": "CTRL-SLABONLY",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed room with slab-to-slab height only",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height"],
+    "slab_height_m": 2.4,
+    "note": "R2: only slab-to-slab Height -> DEFINITION_MISMATCH -> review."
+  },
+  {
+    "element_id": "CTRL-NODATA",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed room with no height data",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height"],
+    "note": "R2: no height observation at all -> MISSING_DATA -> review."
+  },
+  {
+    "element_id": "CTRL-R1-NOWINDOW",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed habitable room, window-space relation unverifiable",
+    "legal_space_use": "habitation",
+    "rules": ["R1_glazing_ratio"],
+    "floor_area_m2": 20.0,
+    "glazing_review_reason": "RELATIONSHIP_UNVERIFIED",
+    "note": "R1 review case: floor area known, but no window can be tied to the space -> RELATIONSHIP_UNVERIFIED."
+  },
+  {
+    "element_id": "CTRL-R1-PASS",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed habitable room, adequate glazing",
+    "legal_space_use": "habitation",
+    "rules": ["R1_glazing_ratio"],
+    "floor_area_m2": 20.0,
+    "glazing_area_m2": 3.0,
+    "note": "R1 pass: glazing 3.0 / floor 20.0 = 0.15 >= 0.10."
+  },
+  {
+    "element_id": "CTRL-R1-FAIL",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed habitable room, insufficient glazing",
+    "legal_space_use": "habitation",
+    "rules": ["R1_glazing_ratio"],
+    "floor_area_m2": 20.0,
+    "glazing_area_m2": 1.5,
+    "note": "R1 fail: glazing 1.5 / floor 20.0 = 0.075 < 0.10."
+  },
+  {
+    "element_id": "CTRL-R1-EQ",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed office, glazing exactly at threshold",
+    "legal_space_use": "office",
+    "rules": ["R1_glazing_ratio"],
+    "floor_area_m2": 20.0,
+    "glazing_area_m2": 2.0,
+    "note": "R1 pass (threshold equality): glazing 2.0 / floor 20.0 = 0.10 == 0.10."
+  },
+  {
+    "element_id": "CTRL-R2-MM",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed habitable room, height given in millimetres",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height"],
+    "measurements": {"finished_ceiling_height_m": {"value": 2600, "unit": "mm"}},
+    "note": "Units: non-SI but safely convertible. 2600 mm -> 2.6 m -> pass. NOT a UNIT_MISMATCH."
+  },
+  {
+    "element_id": "CTRL-R1-CM2",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed kitchen, glazing given in square centimetres",
+    "legal_space_use": "kitchen",
+    "rules": ["R1_glazing_ratio"],
+    "floor_area_m2": 20.0,
+    "measurements": {"glazing_area_m2": {"value": 30000, "unit": "cm2"}},
+    "note": "Units: non-SI area, safely convertible. 30000 cm2 -> 3.0 m2 -> ratio 0.15 -> pass. NOT a UNIT_MISMATCH."
+  },
+  {
+    "element_id": "CTRL-UNIT-MISSING",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed room, height value with no unit",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height"],
+    "measurements": {"finished_ceiling_height_m": {"value": 2.5, "unit": null}},
+    "note": "UNIT_MISMATCH fault (missing unit): value present but no unit -> unusable -> review."
+  },
+  {
+    "element_id": "CTRL-UNIT-UNKNOWN",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed room, unknown/non-convertible unit",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height"],
+    "measurements": {"finished_ceiling_height_m": {"value": 2.5, "unit": "cubit"}},
+    "note": "UNIT_MISMATCH fault (unknown unit): not in registry -> not safely convertible -> review."
+  },
+  {
+    "element_id": "CTRL-UNIT-DIM",
+    "element_source_mode": "constructed_case",
+    "element_name": "Constructed room, area unit given for a length operand",
+    "legal_space_use": "habitation",
+    "rules": ["R2_finished_height"],
+    "measurements": {"finished_ceiling_height_m": {"value": 2.5, "unit": "m2"}},
+    "note": "UNIT_MISMATCH fault (dimension mismatch): m2 is an area unit for a length operand -> review."
+  }
+]

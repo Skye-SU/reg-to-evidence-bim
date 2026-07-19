@@ -1,0 +1,33 @@
+{
+  "provenance": {
+    "extractor": "cached_replay",
+    "is_live_model_output": false,
+    "note": "Author-provided stand-in for a live LLM extraction response. No live model call is bundled, so the pipeline stays offline and deterministic. The validation loop (schema + source-span/hash + gold diff) treats this JSON exactly as it would a live response; swapping in a provider adapter that sends only the public excerpt + the RuleCandidate schema is a one-function change (see reg_to_check/extractor.py).",
+    "schema": "reg_to_check.extractor.RuleCandidate",
+    "inputs_sent_to_extractor": "public manifest excerpt + typed schema instruction only (never IFC, local files, or secrets)"
+  },
+  "candidates": {
+    "HK_CAP123F_R24_CURRENT": {
+      "rule_id": "R2_finished_height",
+      "source_id": "HK_CAP123F_R24_CURRENT",
+      "source_clause_id": "Cap.123F Reg.24(1)",
+      "source_span_hash": "sha256:61aa9dc28f6d69f869658b4c0aeb33ba704fdd318fabb31e94da921e3a49cd6c",
+      "check_type": "min_threshold",
+      "operands": ["finished_ceiling_height_m"],
+      "threshold": 2.5,
+      "unit_si": "m",
+      "applies_to_legal_use": ["habitation", "office"]
+    },
+    "HK_CAP123F_R30_CURRENT": {
+      "rule_id": "R1_glazing_ratio",
+      "source_id": "HK_CAP123F_R30_CURRENT",
+      "source_clause_id": "Cap.123F Reg.30(2)(a)(i)",
+      "source_span_hash": "sha256:1a9e08666f5e28571f6af19916b5fb7a6df237a566049f40ff44257c41882c24",
+      "check_type": "ratio_minimum",
+      "operands": ["glazing_area_m2", "floor_area_m2"],
+      "threshold": 0.10,
+      "unit_si": "ratio",
+      "applies_to_legal_use": ["habitation", "office", "kitchen"]
+    }
+  }
+}

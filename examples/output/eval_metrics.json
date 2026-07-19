@@ -1,0 +1,50 @@
+{
+  "n_checks": 22,
+  "n_gold": 22,
+  "outcome_accuracy": 1.0,
+  "outcome_correct": 22,
+  "applicability_accuracy": 1.0,
+  "applicability_correct": 22,
+  "review": {
+    "tp": 11,
+    "fp": 0,
+    "fn": 0,
+    "tn": 11,
+    "precision": 1.0,
+    "recall": 1.0,
+    "positives_in_gold": 11
+  },
+  "status_distribution": {
+    "pass": 8,
+    "not_applicable": 1,
+    "needs_review": 11,
+    "fail": 2
+  },
+  "branch_coverage": {
+    "hit": [
+      "evaluate_fail",
+      "evaluate_pass",
+      "mapping_review",
+      "not_applicable",
+      "scope_unknown_review"
+    ],
+    "missing": [
+      "source_integrity_failure"
+    ],
+    "count": "5/6"
+  },
+  "reason_code_coverage": {
+    "hit": [
+      "DEFINITION_MISMATCH",
+      "MISSING_DATA",
+      "RELATIONSHIP_UNVERIFIED",
+      "RULE_SCOPE_UNKNOWN",
+      "UNIT_MISMATCH"
+    ],
+    "missing": [
+      "SOURCE_INTEGRITY_FAILURE"
+    ],
+    "count": "5/6"
+  },
+  "mismatches": []
+}
